@@ -1,3 +1,6 @@
+mongodb-connection.properties
+jwt-secret.properties
+
 HELP.md
 .gradle
 build/
