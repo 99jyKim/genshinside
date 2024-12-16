@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/api/message")
+@CrossOrigin(origins = ["http://localhost:3000", "http://genshinside.netlify.app"])
 class MessageController {
     @GetMapping
-    @CrossOrigin(origins = ["http://localhost:3000", "http://genshinside.netlify.app"])
+    fun getRoot() = mapOf("status" to "success")
+    @GetMapping("/api/message")
     fun getMessage() = mapOf("status" to "success")
 }
