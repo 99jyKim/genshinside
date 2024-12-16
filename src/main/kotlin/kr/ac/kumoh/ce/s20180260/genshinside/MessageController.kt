@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 @CrossOrigin(origins = ["http://localhost:3000", "http://genshinside.netlify.app"])
 class MessageController {
     @GetMapping
-    fun getRoot() = mapOf("status" to "success")
+    fun getRoot() = mapOf("status" to "success-root")
     @GetMapping("/api/message")
-    fun getMessage() = mapOf("status" to "success")
+    fun getMessage() = mapOf("status" to "success-api/message")
 }
